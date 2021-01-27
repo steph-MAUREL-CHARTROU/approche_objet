@@ -11,6 +11,17 @@ public class TestPersonne {
 
 		Personne durand = new Personne("Jacques", "Durand", a1);
 
+	  
+	   
+	    a1.setNumRue(50);
+	    a1.setRue("Rue de l'amour");
+	    a1.setCodePostal("34680");
+	    a1.setVille("Saint Georges d'Orques");
+	    
+	    System.out.println(durand.toString());
+
 	}
+	
+	
 
 }
