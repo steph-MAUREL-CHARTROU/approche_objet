@@ -11,21 +11,11 @@ import fr.entites.AdressePostale;
 public class TestAdressePostale {
 
 	public static void main(String[] args) {
-		
-		AdressePostale adresse1 = new AdressePostale();
-		
-		adresse1.numRue = 35;
-		adresse1.rue = "avenue de Genève";
-		adresse1.codePostal="74140";
-		adresse1.ville ="Douvaine";
-		
-AdressePostale adresse2 = new AdressePostale();
-		
-		adresse2.numRue = 2;
-		adresse2.rue = "allée des roches";
-		adresse2.codePostal="66160";
-		adresse2.ville ="Le boulou";
-		
+
+		AdressePostale adresse1 = new AdressePostale(35, " avenue de Genève", " 74140", " Douvaine");
+
+		AdressePostale adresse2 = new AdressePostale(2, " allée des roches", "66160", "Le Boulou");
+
 	}
 
 }

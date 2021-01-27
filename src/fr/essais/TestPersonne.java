@@ -6,21 +6,11 @@ import fr.entites.Personne;
 public class TestPersonne {
 
 	public static void main(String[] args) {
-		
-		
-		AdressePostale a1 = new AdressePostale();
-		
-		a1.numRue = 35;
-		a1.rue = "avenue de Genève";
-		a1.codePostal="74140";
-		a1.ville ="Douvaine";
 
+		AdressePostale a1 = new AdressePostale(65, "avenue des prés d'arènes", "34070", "Montpellier");
 
-		Personne durand = new Personne();
-		
-		durand.nom = "Jacques";
-		durand.prenom = "Durand";
-		durand.adressePostale = a1;
+		Personne durand = new Personne("Jacques", "Durand", a1);
+
 	}
 
 }
