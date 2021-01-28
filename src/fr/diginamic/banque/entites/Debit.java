@@ -12,6 +12,24 @@ public class Debit extends Operation{
 		// TODO Auto-generated method stub
 		return " Débit // ";
 	}
+
+	@Override
+	public String getDateOperation() {
+		// TODO Auto-generated method stub
+		return dateOperation;
+	}
+
+	@Override
+	public int getMontant() {
+		// TODO Auto-generated method stub
+		return montant;
+	}
+
+	@Override
+	public void setMontant() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 
