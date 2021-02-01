@@ -1,4 +1,9 @@
 package fr.diginamic.banque.entites;
+/**
+ * 
+ * @author StephanieMC
+ *
+ */
 
 public class Compte {
 	

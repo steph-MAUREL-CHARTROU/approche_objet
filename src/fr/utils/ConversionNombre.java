@@ -1,6 +1,11 @@
 package fr.utils;
 
 import java.lang.Integer;
+/**
+ * 
+ * @author StephanieMC
+ *
+ */
 
 
 public class ConversionNombre {

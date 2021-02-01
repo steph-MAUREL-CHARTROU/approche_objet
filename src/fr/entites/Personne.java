@@ -1,4 +1,9 @@
 package fr.entites;
+/**
+ * 
+ * @author StephanieMC
+ *
+ */
 
 public class Personne {
 	

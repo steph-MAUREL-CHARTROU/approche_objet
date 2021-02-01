@@ -1,6 +1,11 @@
 package fr.diginamic.chaines;
 
 import java.util.Arrays;
+/**
+ * 
+ * @author StephanieMC
+ *
+ */
 
 public class ManipulationChaine {
 

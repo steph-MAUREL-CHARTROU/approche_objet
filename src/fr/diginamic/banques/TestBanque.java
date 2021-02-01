@@ -3,6 +3,12 @@ package fr.diginamic.banques;
 import fr.diginamic.banque.entites.Compte;
 import fr.diginamic.banque.entites.CompteTaux;
 
+/**
+ * 
+ * @author StephanieMC
+ *
+ */
+
 public class TestBanque {
 
 	public static void main(String[] args) {

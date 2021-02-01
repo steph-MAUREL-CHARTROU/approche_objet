@@ -1,4 +1,9 @@
 package fr.geometrie;
+/**
+ * 
+ * @author StephanieMC
+ *
+ */
 
 public class TestObjetGeometrique {
 

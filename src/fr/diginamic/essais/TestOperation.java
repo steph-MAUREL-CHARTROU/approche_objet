@@ -1,6 +1,11 @@
 package fr.diginamic.essais;
 
 import fr.diginamic.operations.Operation;
+/**
+ * 
+ * @author StephanieMC
+ *
+ */
 
 public class TestOperation  {
 

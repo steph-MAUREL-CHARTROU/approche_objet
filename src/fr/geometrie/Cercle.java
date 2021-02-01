@@ -1,5 +1,11 @@
 package fr.geometrie;
 
+/**
+ * 
+ * @author StephanieMC
+ *
+ */
+
 public class Cercle implements ObjetGeometrique {
 	
 	double rayon;

@@ -1,4 +1,9 @@
 package fr.diginamic.entites;
+/**
+ * 
+ * @author StephanieMC
+ *
+ */
 
 public class  Cercle {
 

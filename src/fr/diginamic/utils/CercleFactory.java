@@ -1,6 +1,11 @@
 package fr.diginamic.utils;
 
 import fr.diginamic.entites.Cercle;
+/**
+ * 
+ * @author StephanieMC
+ *
+ */
 
 public class CercleFactory {
 

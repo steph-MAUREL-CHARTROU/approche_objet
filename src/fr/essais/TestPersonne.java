@@ -3,6 +3,12 @@ package fr.essais;
 import fr.entites.AdressePostale;
 import fr.entites.Personne;
 
+/**
+ * 
+ * @author StephanieMC
+ *
+ */
+
 public class TestPersonne {
 
 	public static void main(String[] args) {

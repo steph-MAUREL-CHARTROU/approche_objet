@@ -1,4 +1,9 @@
 package fr.diginamic.operations;
+/**
+ * 
+ * @author StephanieMC
+ *
+ */
 
 public class CalculMoyenne {
 
