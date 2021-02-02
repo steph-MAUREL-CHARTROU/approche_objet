@@ -9,7 +9,7 @@ public class Maison {
 
 	private Piece[] tabMaison;
 
-	public Maison() {
+	public Maison( Piece[] tabMaison) {
 
 		this.tabMaison = new Piece[0];
 	}
