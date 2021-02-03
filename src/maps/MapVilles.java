@@ -4,6 +4,11 @@ import java.util.HashMap;
 import java.util.Iterator;
 
 import listes.Ville;
+/**
+ * 
+ * @author StephanieMC
+ *
+ */
 
 public class MapVilles {
 
