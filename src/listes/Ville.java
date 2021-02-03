@@ -1,11 +1,12 @@
 package listes;
+
 /**
  * 
  * @author StephanieMC
  *
  */
 
-public class Ville {
+public class Ville implements Comparable<Ville> {
 
 	String nom;
 	long nbrHab;
@@ -35,5 +36,21 @@ public class Ville {
 	@Override
 	public String toString() {
 		return "Ville : " + nom + " // Nombres d'habitants : " + nbrHab + "\n";
+	}
+
+	@Override
+	public int compareTo(Ville autreVille) {
+		//
+		if (this.nbrHab > autreVille.getNbrHab()) {
+
+			return 1;
+
+		}
+		if (this.nbrHab < autreVille.getNbrHab()) {
+
+			return -1;
+		}
+
+		return 0;
 	}
 }
