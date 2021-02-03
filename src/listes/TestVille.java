@@ -2,6 +2,7 @@ package listes;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 
 public class TestVille {
 
@@ -42,11 +43,11 @@ public class TestVille {
 		}
 
 		System.out.println(" La ville la plus peuplée est " + nomVille + " avec " + hab + " habitants.");
-		
+
 		// SUPPRESSION Ville la moins peuplée
-		
+
 		Ville villeOut = null;
-		
+
 		for (int i = 0; i < listeVille.size(); i++) { // pareil que précedemment mais dans le sens inverse.
 
 			if (listeVille.get(i).getNbrHab() < hab) {
@@ -56,13 +57,27 @@ public class TestVille {
 
 			}
 		}
-		
+
 		listeVille.remove(villeOut);
-		
+
 		System.out.println("La ville la moins peuplée est " + nomVille + " avec " + hab + " habitants \n");
-		
+
 		System.out.println(" Voici la nouvelle liste : \n" + listeVille.toString());
 
+		// MODIFICATION des ville de plus de 100 000 habitants + Majuscules
+
+		Iterator<Ville> iterator = listeVille.iterator();
+
+		while (iterator.hasNext()) {
+
+			Ville element = iterator.next();
+
+			if (element.getNbrHab() > 100000) {
+
+				element.setNom(element.getNom().toUpperCase());
+			}
+		}
+		System.out.println(listeVille);
 	}
 
 }
