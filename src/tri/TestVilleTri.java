@@ -29,8 +29,12 @@ public class TestVilleTri {
 		Collections.addAll(villeTri, nice, carcassonne, narbonne, lyon, foix, pau, marseille, tarbes);
 		
 		Collections.sort(villeTri, new ComparatorHabitant());
+		System.out.println( "Comparateur nombre d'habitant  ( ordre croissant) : \n" + villeTri);
 		
-		System.out.println(villeTri);
+		Collections.sort(villeTri, new ComparatorNom());
+		System.out.println( "Comparateur nom de ville ( ordre alphabétique) : \n" + villeTri);
+		
+		
 	}
 
 }
