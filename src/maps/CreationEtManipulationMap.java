@@ -2,6 +2,11 @@ package maps;
 
 import java.util.HashMap;
 import java.util.Iterator;
+/**
+ * 
+ * @author StephanieMC
+ *
+ */
 
 public class CreationEtManipulationMap {
 

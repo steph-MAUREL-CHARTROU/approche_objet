@@ -1,6 +1,11 @@
 package maps;
 
 import java.util.HashMap;
+/**
+ * 
+ * @author StephanieMC
+ *
+ */
 
 public class CreationMap {
 
