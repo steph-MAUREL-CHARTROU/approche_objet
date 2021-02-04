@@ -6,6 +6,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -43,6 +45,8 @@ public class Application {
 			nouvelleListe.add(ville);
 
 		}
+		// Etape 3
+		// Je récupère la ville de Montpellier avec une boucle objet
 
 		for (Ville montpellier : nouvelleListe) {
 
@@ -54,6 +58,10 @@ public class Application {
 			}
 
 		}
+		// Etape 4
+		// Je récupère toutes les villes de l'hérault que j'ajoute à mon arrayList
+		// déclarée en haut villeHérault
+
 		for (Ville vh : nouvelleListe) {
 
 			if (vh.getCodeDepartement().equals("34")) {
@@ -63,6 +71,9 @@ public class Application {
 			}
 
 		}
+
+		// Et enfin, je travaille sur la liste des ville de l'Hérault pour récupérer la
+		// somme de toutes les populationTotale des villes.
 		int sommePop = 0;
 
 		for (Ville v : villesHerault) {
@@ -73,6 +84,11 @@ public class Application {
 
 		System.out.println(sommePop);
 
+		// Etape 5
+
+		
+		
+	
 	}
 
 }
