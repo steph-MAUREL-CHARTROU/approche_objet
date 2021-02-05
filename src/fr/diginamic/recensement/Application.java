@@ -199,6 +199,39 @@ public class Application {
 		Collections.sort(listDep);
 
 		System.out.println(" Le département le plus peuplé d'Occitanie est le " + listDep.get(0));
+		System.out.println("-----------------------------------------");
+
+		
+		// Etape 9 
+		// Afficher les 10 régions les plus peuplées de France
+		
+		
+		// Afficher les 10 départements les plus peuplées de France 
+	
+		Collections.sort(listDep);
+		System.out.println(" les 10 Départements les plus peuplés de France sont :");
+		System.out.println(" ");
+
+		for (int i = 0; i < 10; i++) {
+
+			System.out.println(listDep.get(i));
+
+		}
+		System.out.println("-----------------------------------------");
+		
+		// Afficher les 10 villes les plus peuplées de France
+		
+		Collections.sort(nouvelleListe, new Comparator10Moins());
+		System.out.println(" les 10 villes les plus grandes de France sont :");
+		System.out.println(" ");
+
+		for (int i = 0; i < 10; i++) {
+
+			System.out.println(nouvelleListe.get(i));
+
+		}
+		System.out.println("-----------------------------------------");
+
 
 	}
 
