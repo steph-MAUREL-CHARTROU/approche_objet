@@ -8,6 +8,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 
@@ -140,25 +141,25 @@ public class Application {
 
 			if (regionO.getCodeRegion().equals("76")) {
 
-				occitanie.add(regionO);
+				occitanie.add(regionO); // remplissage de la liste qui va contenir toutes les villes de l'Occitanie
 			}
 		}
 		int sommePopOccitanie = 0;
 
 		for (Ville v : occitanie) {
 
-			sommePopOccitanie += v.populationTotale;
+			sommePopOccitanie += v.populationTotale; //
 
 		}
 
 		System.out.println("La population totale de l'Occitanie est de " + sommePopOccitanie + "");
 		System.out.println("-----------------------------------------");
-		
-		//Etape 8
+
+		// Etape 8
 		// Afficher les 10 villes les plus importantes de la région Occitanie
-		
+
 		Collections.sort(occitanie, new Comparator10Moins());
-		System.out.println(" les 10 villes les plus grandes de l'Hérault sont :");
+		System.out.println(" les 10 villes les plus importante de l'Occitanie sont :");
 		System.out.println(" ");
 
 		for (int i = 0; i < 10; i++) {
@@ -168,10 +169,37 @@ public class Application {
 		}
 		System.out.println("-----------------------------------------");
 
-		
-		//Afficher le département le plus peuplé de de la région Occitanie
-		
-		
+		// Afficher le département le plus peuplé de la région Occitanie
+
+		HashMap<String, Departement> dep = new HashMap<String, Departement>();
+
+		// Je crée un Objet Departement
+
+		List<Departement> listDep = new ArrayList<>(); // je crée une liste qui recevra la liste de départements
+
+		for (int i = 0; i < occitanie.size(); i++) { // je boucle sur ma liste
+
+			String departementVille = occitanie.get(i).getCodeDepartement(); // stockage du code du departement
+
+			int popDep = occitanie.get(i).getPopulationTotale(); // stockage de la pop totale
+
+			if (!dep.containsKey(departementVille)) { // j'utilise la méthode .containsKey (cf.HashMap)
+
+				dep.put(departementVille, new Departement(departementVille, popDep));// j'ajoute à ma hashmap mes codes
+																						// et la pop
+
+				listDep.add(dep.get(departementVille)); // et je transfert le tout dans la liste !
+
+			} else {
+
+				dep.get(departementVille).setPopulationTotale(dep.get(departementVille).getPopulationTotale() + popDep);
+			}
+
+		}
+		Collections.sort(listDep);
+
+		System.out.println(" Le département le plus peuplé d'Occitanie est le " + listDep.get(0));
+
 	}
 
 }

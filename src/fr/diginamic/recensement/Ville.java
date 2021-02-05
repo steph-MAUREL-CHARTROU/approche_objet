@@ -79,6 +79,7 @@ public class Ville {
 		return " Code Région : " + codeRegion + 
 				" | Nom de la Région : " + nomRegion +
 				" | Code de la Commune : " + codeCommune +
+				" | Code Départemental : " + codeDepartement +
 				" | Nom de la Commune :  " + nomCommune +
 				" | Population Totale = " + populationTotale + " nombre d'habitants";
 	}
