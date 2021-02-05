@@ -31,6 +31,7 @@ public class Application {
 
 		List<Ville> nouvelleListe = new ArrayList<>();
 		List<Ville> villesHerault = new ArrayList<>();
+		List<Ville> occitanie = new ArrayList<>();
 
 		for (String line : listeOriginale) {
 
@@ -72,7 +73,6 @@ public class Application {
 				villesHerault.add(vh);
 			}
 		}
-		
 
 		// Et enfin, je travaille sur la liste des villes de l'Hérault pour récupérer la
 		// somme de toutes les populationTotale des villes.
@@ -83,7 +83,7 @@ public class Application {
 			sommePop += v.populationTotale;
 
 		}
-		
+
 		System.out.println("La population totale de l'Hérault est de " + sommePop + "");
 		System.out.println("-----------------------------------------");
 
@@ -107,36 +107,53 @@ public class Application {
 		}
 		System.out.println(villeMin);
 		System.out.println("-----------------------------------------");
-		
 
 		// Etape 6
 		// Afficher les 10 plus grandes et les 10 plus petites villes de l'Hérault
-		
 
 		Collections.sort(villesHerault, new Comparator10Plus());
-		
-		System.out.println( " les 10 villes les plus petites de l'Hérault sont :");
+
+		System.out.println(" les 10 villes les plus petites de l'Hérault sont :");
 		System.out.println(" ");
-		for ( int i = 0; i < 10; i ++) {
-			
-			
-        	System.out.println(villesHerault.get(i));
-        	
+		for (int i = 0; i < 10; i++) {
+
+			System.out.println(villesHerault.get(i));
+
 		}
 		System.out.println("-----------------------------------------");
-        
-        
-		Collections.sort(villesHerault, new  Comparator10Moins());
-		System.out.println( " les 10 villes les plus grandes de l'Hérault sont :");
+
+		Collections.sort(villesHerault, new Comparator10Moins());
+		System.out.println(" les 10 villes les plus grandes de l'Hérault sont :");
 		System.out.println(" ");
-		
-        for ( int i = 0; i < 10 ; i ++) {
-			
-        	System.out.println(villesHerault.get(i));	
-        	
+
+		for (int i = 0; i < 10; i++) {
+
+			System.out.println(villesHerault.get(i));
+
 		}
-        System.out.println("-----------------------------------------");
-		
+		System.out.println("-----------------------------------------");
+
+		// Etape 7
+		// Afficher la population de toute la Région Occitanie
+
+		for (Ville regionO : nouvelleListe) {
+
+			if (regionO.getCodeRegion().equals("76")) {
+
+				occitanie.add(regionO);
+			}
+		}
+		int sommePopOccitanie = 0;
+
+		for (Ville v : occitanie) {
+
+			sommePopOccitanie += v.populationTotale;
+
+		}
+
+		System.out.println("La population totale de l'Occitanie est de " + sommePopOccitanie + "");
+		System.out.println("-----------------------------------------");
+
 	}
 
 }
