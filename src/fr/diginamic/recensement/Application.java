@@ -204,6 +204,44 @@ public class Application {
 		
 		// Etape 9 
 		// Afficher les 10 régions les plus peuplées de France
+		HashMap<String, Region> reg = new HashMap<String, Region>();
+
+		// Je crée un Objet Departement
+
+		List<Region> listReg = new ArrayList<>(); // je crée une liste qui recevra la liste de départements
+
+		for (int i = 0; i < nouvelleListe.size(); i++) { // je boucle sur ma liste
+
+			String regionVille = nouvelleListe.get(i).getCodeRegion(); // stockage du code du departement
+
+			int popReg = nouvelleListe.get(i).getPopulationTotale(); // stockage de la pop totale
+
+			if (!reg.containsKey(regionVille)) { // j'utilise la méthode .containsKey (cf.HashMap)
+
+				reg.put(regionVille, new Region(regionVille, regionVille, popReg));// j'ajoute à ma hashmap mes codes
+																						// et la pop
+
+				listReg.add(reg.get(regionVille)); // et je transfert le tout dans la liste !
+
+			} else {
+
+				reg.get(regionVille).setPopTotRegion(reg.get(regionVille).getPopTotRegion() + popReg);
+			}
+
+		}
+		Collections.sort(listReg);
+		
+		System.out.println(" les 10 Régions les plus peuplées de France sont :");
+		System.out.println(" ");
+
+		for (int i = 0; i < 10; i++) {
+
+			System.out.println(listReg.get(i));
+
+		}
+		System.out.println("-----------------------------------------");
+		
+		
 		
 		
 		// Afficher les 10 départements les plus peuplées de France 
