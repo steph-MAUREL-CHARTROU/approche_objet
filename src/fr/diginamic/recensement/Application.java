@@ -6,9 +6,12 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
+
+import tri.ComparatorHabitant;
 
 /**
  * 
@@ -72,7 +75,7 @@ public class Application {
 
 		}
 
-		// Et enfin, je travaille sur la liste des ville de l'Hérault pour récupérer la
+		// Et enfin, je travaille sur la liste des villes de l'Hérault pour récupérer la
 		// somme de toutes les populationTotale des villes.
 		int sommePop = 0;
 
@@ -85,10 +88,27 @@ public class Application {
 		System.out.println(sommePop);
 
 		// Etape 5
+		// Afficher la plus petite ville du département de l"hérault
 
-		
-		
-	
+		int min = Integer.MAX_VALUE;
+
+		Ville villeMin = null;
+
+		for (int i = 0; i < villesHerault.size(); i++) {
+
+			Ville ligneEnCours = villesHerault.get(i); // récupération de la ligne en cours que je vais pouvoir comparer
+
+			if (ligneEnCours.populationTotale < min) {
+
+				min = ligneEnCours.populationTotale;
+
+				villeMin = ligneEnCours;
+
+			}
+
+		}
+		System.out.println(villeMin);
+
 	}
 
 }
