@@ -153,7 +153,23 @@ public class Application {
 
 		System.out.println("La population totale de l'Occitanie est de " + sommePopOccitanie + "");
 		System.out.println("-----------------------------------------");
+		
+		//Etape 8
+		// Afficher les 10 villes les plus importantes de la région Occitanie
+		
+		Collections.sort(occitanie, new Comparator10Moins());
+		System.out.println(" les 10 villes les plus grandes de l'Hérault sont :");
+		System.out.println(" ");
 
+		for (int i = 0; i < 10; i++) {
+
+			System.out.println(occitanie.get(i));
+
+		}
+		System.out.println("-----------------------------------------");
+
+		
+		//Afficher le département le plus peuplé de
 	}
 
 }
