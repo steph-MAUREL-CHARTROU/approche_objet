@@ -70,10 +70,9 @@ public class Application {
 			if (vh.getCodeDepartement().equals("34")) {
 
 				villesHerault.add(vh);
-
 			}
-
 		}
+		
 
 		// Et enfin, je travaille sur la liste des villes de l'Hérault pour récupérer la
 		// somme de toutes les populationTotale des villes.
@@ -84,8 +83,9 @@ public class Application {
 			sommePop += v.populationTotale;
 
 		}
-
-		System.out.println(sommePop);
+		
+		System.out.println("La population totale de l'Hérault est de " + sommePop + "");
+		System.out.println("-----------------------------------------");
 
 		// Etape 5
 		// Afficher la plus petite ville du département de l"hérault
@@ -103,12 +103,40 @@ public class Application {
 				min = ligneEnCours.populationTotale;
 
 				villeMin = ligneEnCours;
-
 			}
-
 		}
 		System.out.println(villeMin);
+		System.out.println("-----------------------------------------");
+		
 
+		// Etape 6
+		// Afficher les 10 plus grandes et les 10 plus petites villes de l'Hérault
+		
+
+		Collections.sort(villesHerault, new Comparator10Plus());
+		
+		System.out.println( " les 10 villes les plus petites de l'Hérault sont :");
+		System.out.println(" ");
+		for ( int i = 0; i < 10; i ++) {
+			
+			
+        	System.out.println(villesHerault.get(i));
+        	
+		}
+		System.out.println("-----------------------------------------");
+        
+        
+		Collections.sort(villesHerault, new  Comparator10Moins());
+		System.out.println( " les 10 villes les plus grandes de l'Hérault sont :");
+		System.out.println(" ");
+		
+        for ( int i = 0; i < 10 ; i ++) {
+			
+        	System.out.println(villesHerault.get(i));	
+        	
+		}
+        System.out.println("-----------------------------------------");
+		
 	}
 
 }
