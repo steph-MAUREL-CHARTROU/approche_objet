@@ -8,6 +8,20 @@ package listes;
 
 public class Ville implements Comparable<Ville> {
 
+	@Override
+	public boolean equals(Object obj) {
+	
+		if (!(obj instanceof Ville)) // verification que l'objet est une ville.
+			
+			return false;
+		
+		Ville other = (Ville) obj;
+		if (nbrHab != other.nbrHab)
+			return false;
+		boolean egalité = this.nom.equals( other.getNom()) && this.nbrHab == other.getNbrHab();
+		return egalité;
+	}
+
 	String nom;
 	long nbrHab;
 

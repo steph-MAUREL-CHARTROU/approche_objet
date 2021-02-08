@@ -37,11 +37,9 @@ public class TestDates {
 		
 		//etape 2
 		
-		Calendar cal1 = Calendar.getInstance();
-		Date date1 = cal.getTime();
 		
 		SimpleDateFormat formateurComplet = new SimpleDateFormat( "dd MM yyyy HH:mm:ss");
-		System.out.println(formateurComplet.format(date1));
+		System.out.println(formateurComplet.format(date));
 		
 		// Etape 3 
 		
