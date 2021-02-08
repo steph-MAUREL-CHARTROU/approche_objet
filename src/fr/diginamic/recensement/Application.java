@@ -234,7 +234,7 @@ public class Application {
 		System.out.println(" les 10 Régions les plus peuplées de France sont :");
 		System.out.println(" ");
 
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i <= 10; i++) {
 
 			System.out.println(listReg.get(i));
 
