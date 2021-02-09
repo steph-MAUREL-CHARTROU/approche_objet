@@ -2,9 +2,19 @@ package fr.diginamic.testexceptions;
 
 import java.lang.reflect.Field;
 
+
+
 public class ReflectionUtils {
 
 	public static void afficherAttributs(Object obj) throws IllegalArgumentException, IllegalAccessException {
+		
+		
+		if ( obj == null) {
+			
+			throw (ReflectionException)
+			
+		}
+		
 
 		// On commence par récupérer la classe de l'objet passée en paramètre.
 		// la classe fournit toutes les informations sur la structure d'un objet.
@@ -21,5 +31,9 @@ public class ReflectionUtils {
 
 					field.get(obj).toString());
 		}
+	
+	
+		
+		
 	}
 }
