@@ -6,12 +6,12 @@ import java.lang.reflect.Field;
 
 public class ReflectionUtils {
 
-	public static void afficherAttributs(Object obj) throws IllegalArgumentException, IllegalAccessException {
+	public static void afficherAttributs(Object obj) throws IllegalArgumentException, IllegalAccessException, ReflectionException {
 		
 		
 		if ( obj == null) {
 			
-			throw (ReflectionException)
+			throw  new ReflectionException ( " Attention ");
 			
 		}
 		
